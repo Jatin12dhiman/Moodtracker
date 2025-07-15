@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 
 interface Cta10Props {
-  heading: string;
-  description: string;
+ heading?: string;
+  description?: string;
   buttons?: {
     primary?: {
       text: string;
@@ -26,7 +26,7 @@ export default function Cta({
   },
 }: Cta10Props): React.ReactElement {
   return (
-    <section className="pt-0 pb-12 w-full " id="plans">
+    <section className="pt-0 px-12 pb-12 w-full " id="plans">
       <div className="w-full max-w-none ">
         <div className=" flex w-full flex-col gap-16 overflow-hidden rounded-none p-8 md:rounded-none lg:flex-row lg:items-center lg:p-12 bg-white-700 ">
           <div className="flex-1">

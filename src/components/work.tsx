@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-
+import Image from "next/image";
 export default function Work() {
   return (
     <section className="w-full bg-background py-16">
@@ -23,7 +23,7 @@ export default function Work() {
         </div>
         {/* Right: Image/Logo */}
         <div className="flex-1 flex items-center justify-center h-full min-h-[100px] lg:min-h-[350px]">
-          <img src="/Mood.jpg" alt="Mood" className="w-[80%] md:w-full max-w-lg mx-auto rounded-lg shadow-md object-cover" />
+          <Image src="/Mood.jpg" alt="Mood" height={400}   width={600}   className="w-[80%] md:w-full max-w-lg mx-auto rounded-lg shadow-md object-cover" />
         </div>
       </div>
     </section>

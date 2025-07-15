@@ -1,8 +1,9 @@
 'use client';
 
-import { Book, Menu, Sunset, Trees, Zap, Moon, Sun } from "lucide-react";
+import {  Menu, Trees, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 import {
   Accordion,
@@ -63,7 +64,7 @@ interface Navbar1Props {
 
 // Theme Toggle Component
 function ThemeToggle() {
-  const { setTheme, theme } = useTheme();
+  const { setTheme} = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -108,7 +109,7 @@ function ThemeToggle() {
 export default function SiteHeader({
   logo = {
     url: "https://www.shadcnblocks.com",
-    src: "https://images.vexels.com/media/users/3/137337/isolated/preview/9a5ed5bf74c9c394d925e596665c4fe8-heart-logo-hearts.png",
+    src: "/logoM.png", // Changed to local path
     alt: "logo",
     title: "Mood Track",
   },
@@ -131,7 +132,7 @@ export default function SiteHeader({
         <nav className="hidden lg:flex items-center justify-between py-4">
           {/* Logo - Left side */}
           <a href={logo.url} className="flex items-center gap-2">
-            <img src={logo.src} className="max-h-8 dark:invert" alt={logo.alt} />
+            <Image src={logo.src} className="max-h-8 dark:invert" alt={logo.alt} width={40} height={40} />
             <span className="text-lg font-semibold tracking-tighter">
               {logo.title}
             </span>
@@ -163,7 +164,7 @@ export default function SiteHeader({
           <div className="flex items-center justify-between py-4">
             {/* Logo - Left side */}
             <a href={logo.url} className="flex items-center gap-2">
-              <img src={logo.src} className="max-h-8 dark:invert" alt={logo.alt} />
+              <Image src={logo.src} className="max-h-8 dark:invert" alt={logo.alt} width={40} height={40} />
               <span className="text-lg font-semibold tracking-tighter">
                 {logo.title}
               </span>
@@ -182,7 +183,7 @@ export default function SiteHeader({
                   <SheetHeader>
                     <SheetTitle>
                       <a href={logo.url} className="flex items-center gap-2">
-                        <img src={logo.src} className="max-h-8" alt={logo.alt} />
+                        <Image src={logo.src} className="max-h-8" alt={logo.alt} width={32} height={32} />
                         <span className="text-lg font-semibold tracking-tighter">
                           {logo.title}
                         </span>

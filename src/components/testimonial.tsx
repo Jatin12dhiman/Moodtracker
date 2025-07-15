@@ -1,26 +1,22 @@
 import React from "react";
-
 const testimonials = [
   {
     quote:
       "MoodTrack has truly changed my life. I feel more in control and happier every day! Highly recommended for anyone who wants to improve their well-being.",
     name: "John Doe",
     role: "CEO & Founder",
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {
     quote:
       "The daily insights and positive reminders keep me motivated and focused. MoodTrack makes it easy to track my progress and celebrate my wins!",
     name: "Jane Doe",
     role: "CTO",
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
   },
   {
     quote:
       "Finally, a tool that helps me understand and improve my mood. MoodTrack is simple, effective, and a joy to use every day!",
     name: "John Smith",
     role: "COO",
-    avatar: "https://randomuser.me/api/portraits/men/45.jpg",
   },
 ];
 
@@ -35,15 +31,11 @@ export default function Testimonial() {
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="border rounded-xl p-8 flex flex-col justify-between h-full bg-background"
+              className="border rounded-xl p-8 flex flex-col justify-between h-full bg-background transition-colors hover:bg-gradient-to-br hover:from-purple-100 hover:to-white dark:hover:from-purple-950 dark:hover:to-background"
             >
               <p className="text-lg text-foreground mb-8">“{t.quote}”</p>
               <div className="flex items-center gap-4 mt-auto">
-                <img
-                  src={t.avatar}
-                  alt={t.name}
-                  className="w-12 h-12 rounded-full object-cover border"
-                />
+                
                 <div>
                   <div className="font-semibold text-foreground">{t.name}</div>
                   <div className="text-muted-foreground text-sm">{t.role}</div>
