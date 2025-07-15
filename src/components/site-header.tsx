@@ -113,10 +113,10 @@ export default function SiteHeader({
     title: "Mood Track",
   },
   menu = [
-    { title: "Home", url: "#" },
-    { title: "Resources", url: "#" },
-    { title: "Pricing", url: "#" },
-    { title: "Blog", url: "#" },
+    { title: "Home", url: "#Home" },
+    { title: "Features", url: "#features" },
+    { title: "Plans", url: "#plans" },
+    { title: "Stories", url: "#testimonial" },
   ],
   auth = {
     login: { title: "Login", url: "#" },

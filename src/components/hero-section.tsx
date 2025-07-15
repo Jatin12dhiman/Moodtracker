@@ -3,6 +3,8 @@ import React from "react";
 
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { HoleBackgroundDemo } from "./hole-background-demo";
+import { HoleBackground } from "./animate-ui/backgrounds/hole";
 
 interface Hero7Props {
   heading?: string;
@@ -22,10 +24,10 @@ interface Hero7Props {
 }
 
 export default function HeroSection({
-  heading = "A Collection of Components Built With Shadcn & Tailwind",
-  description = "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.",
+  heading = "Empower Your Mood, Empower Your Life",
+  description = "Unlock your best self with MoodTrack—your daily companion for happiness, growth, and well-being.",
   button = {
-    text: "Discover all components",
+    text: "Start Living Better",
     url: "https://www.shadcnblocks.com",
   },
   reviews = {
@@ -56,17 +58,24 @@ export default function HeroSection({
   },
 }: Hero7Props) {
   return (
-    <section className="py-32">
-      <div className="container text-center">
-        <div className="mx-auto flex max-w-5xl flex-col gap-6">
+    <section className="relative min-h-screen overflow-hidden flex items-center" id="Home">
+      {/* Background */}
+      <HoleBackground className="absolute inset-0 w-full h-full z-0" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-white/60 dark:bg-black/40 z-0" />
+      {/* Content */}
+      <div className="container relative z-10 flex flex-col justify-center items-center min-h-screen">
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center">
           <h1 className="text-3xl font-extrabold lg:text-6xl">{heading}</h1>
           <p className="text-muted-foreground text-balance lg:text-lg">
             {description}
           </p>
+          <div className="w-full flex justify-center">
+            <Button asChild size="lg" className="mt-6 mx-auto">
+              <a href={button.url}>{button.text}</a>
+            </Button>
+          </div>
         </div>
-        <Button asChild size="lg" className="mt-10">
-          <a href={button.url}>{button.text}</a>
-        </Button>
         <div className="mx-auto mt-10 flex w-fit flex-col items-center gap-4 sm:flex-row">
           <span className="mx-4 inline-flex items-center -space-x-4">
             {reviews.avatars.map((avatar, index) => (
