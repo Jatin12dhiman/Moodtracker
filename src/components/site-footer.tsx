@@ -1,5 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+
 import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
 
 export default function SiteFooter() {
@@ -9,7 +11,13 @@ export default function SiteFooter() {
         {/* Left: Logo + Description + Social */}
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-3 mb-2">
-            <img src="https://images.vexels.com/media/users/3/137337/isolated/preview/9a5ed5bf74c9c394d925e596665c4fe8-heart-logo-hearts.png" alt="Logo" className="w-12 h-12 rounded dark:invert" />
+           <Image
+  src="https://images.vexels.com/media/users/3/137337/isolated/preview/9a5ed5bf74c9c394d925e596665c4fe8-heart-logo-hearts.png"
+  alt="Logo"
+  width={48}
+  height={48}
+  className="rounded dark:invert"
+/>
             <span className="text-2xl font-bold text-foreground">MoodTrack</span>
           </div>
           <p className="text-muted-foreground text-base max-w-md">

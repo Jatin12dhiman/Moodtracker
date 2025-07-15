@@ -3,7 +3,6 @@ import React from "react";
 
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { HoleBackgroundDemo } from "./hole-background-demo";
 import { HoleBackground } from "./animate-ui/backgrounds/hole";
 
 interface Hero7Props {
@@ -60,11 +59,11 @@ export default function HeroSection({
   return (
     <section className="relative min-h-screen overflow-hidden flex items-center" id="Home">
       {/* Background */}
-      <HoleBackground className="absolute inset-0 w-full h-full z-0" />
+      <HoleBackground className="absolute inset-0 w-full h-full " />
       {/* Overlay */}
       <div className="absolute inset-0 bg-white/60 dark:bg-black/40 z-0" />
       {/* Content */}
-      <div className="container relative z-10 flex flex-col justify-center items-center min-h-screen">
+      <div className="relative z-10 flex flex-col justify-center items-center min-h-screen w-full">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 text-center">
           <h1 className="text-3xl font-extrabold lg:text-6xl">{heading}</h1>
           <p className="text-muted-foreground text-balance lg:text-lg">
@@ -105,4 +104,3 @@ export default function HeroSection({
     </section>
   );
 }
-
